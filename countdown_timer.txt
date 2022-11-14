@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>+
+    <p id="demo"></p>
+    <script>
+        var countdown=new Date("Nov 14,2022 17:46:00").getTime();
+
+        var x=setInterval(function(){
+            var now=new Date().getTime();
+            var difference=countdown-now;
+            var days=Math.floor((difference/(24*60*60*1000)));
+            var hours=Math.floor((difference % (1000*24*60*60))/(1000*60*60));
+            var min=Math.floor((difference % (1000*60*60))/(1000*60));
+            var seconds=Math.floor((difference % (1000*60))/1000);
+
+            document.getElementById("demo").innerHTML=days+"d "+hours+"h "+min+'m '+seconds+'s '
+    
+            if(difference<0){
+                clearInterval(x);
+
+                document.getElementById('demo').innerHTML="EXPIRED";
+            }
+        },1000)
+
+    </script>
+</body>
+</html>

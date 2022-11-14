@@ -1,0 +1,60 @@
+<html>
+<head>
+    
+    <title>Practical 8</title>
+    <h1>Set Operations</h1><br><br>
+    <h2>Set A: 1 2 3</h2>
+    <h2>Set B: 3 4</h2><br><br>
+
+</head>
+<body>
+    <input type="button" value="Check intesection" onclick="setIntersectionop()"><br><br>
+    <input type="button" value="Check union" onclick="setUnionop()"><br><br>
+    <input type="button" value="Check set difference" onclick="setdiffop()"><br><br>
+    <input type="button" value="Check subset" onclick="setsubsetop()"><br><br>
+
+    <script>
+        var a=new Set([1,2,3]);
+        var b=new Set([3,4]);
+
+        function setIntersectionop(){
+            let intersectset=new Set();
+            for(let i of b){
+
+                if(a.has(i)){
+                    intersectset.add(i);
+                }
+            }
+            console.log(intersectset);
+        }
+
+        function setUnionop(){
+            var unionset=new Set(a);
+            for(let i of b){
+                unionset.add(i);
+            }
+            console.log(unionset);
+        }
+
+        function setdiffop(){
+            let diffset=new Set(a);
+            for(i of b){
+                diffset.delete(i);
+            }
+            console.log(diffset);
+        }
+
+        function setsubsetop(){
+            for(var i of b){
+                if(a.has(i)){
+                    document.write("true")
+                    return;
+                }
+            }
+                    document.write('false');
+                
+            
+        }
+    </script>
+</body>
+</html>

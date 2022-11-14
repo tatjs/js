@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>String</title>
+       <h1>String Operations</h1>
+    </head>
+    <body>
+        <input type="text" id="string" placeholder="Enter the string">
+        <input type="submit" value="reverse" onclick="RevString()"><br><br>
+
+        <input type="text" id="replace" placeholder="Enter replacing string">
+        <input type="text" id="to" placeholder="To replace">
+        <input type="text" id="from" placeholder="replace from">
+        <input type="Submit" onclick="replaceChar()"><br><br>
+
+        <input type="text" id="pal" placeholder="Enter pallindrome">
+        <input type="submit" onclick="Pallindrome()">
+    </body>
+    <script>
+        function RevString(){
+            var str1=document.getElementById('string').value;
+            var r2=str1.split("");
+            var r3=r2.reverse();
+            var r4=r3.join("");
+            alert(r4);
+        }
+
+        function replaceChar(){
+            var str1=document.getElementById('replace').value;
+            var str2=document.getElementById('to').value;
+            var str3=document.getElementById('from').value;
+            
+            var v=str1.replace(str2,str3);
+            alert(v);
+        }
+
+        function Pallindrome(){
+            var str=document.getElementById('pal').value;
+            var len=str.length;
+            for(var i=0;i<len/2;i++){
+                if(str[i]!=str[len-1-i]){
+                    window.alert("String is not pallindrome");
+                    return;
+                }
+            }
+                    window.alert("String is Pallindrome");
+        }
+    </script>
+</html>

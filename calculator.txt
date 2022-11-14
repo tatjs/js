@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CalC</title>
+</head>
+<body>
+    Enter first number :
+    <input type="text" id="ip1" readonly >
+    <input type="button" value="+" onclick="addition()" >
+    <input type="button" value="-" onclick="subtraction()" >
+    <input type="button" value="*" onclick="multiplication()" ><br><br>
+
+    Enter second number :
+    <input type="text" id="ip2" readonly> 
+    <input type="button" value="/" onclick="division()" >
+    <input type="button" value="sq" onclick="square()" >
+    <input type="button" value="cu" onclick="cube()" ><br><br>
+
+    Result : 
+    <input type="text" id="op" readonly>
+    <input type="button" value="clear" onclick="clc()" >
+
+    <br><br>
+    For First Number :
+    <br><br>
+    <input type="button" value="7" onclick="seven()" >
+    <input type="button" value="8" onclick="eight()" >
+    <input type="button" value="9" onclick="nine()" ><br><br>
+    <input type="button" value="4" onclick="four()" >
+    <input type="button" value="5" onclick="five()" >
+    <input type="button" value="6" onclick="six()" ><br><br>
+    <input type="button" value="1" onclick="one()" >
+    <input type="button" value="2" onclick="two()" >
+    <input type="button" value="3" onclick="three()" ><br><br>
+    <input type="button" value="0" onclick="zero()" ><br><br>
+    
+    For Second Number :
+    <br><br>
+    <input type="button" value="7" onclick="seven2()" >
+    <input type="button" value="8" onclick="eight2()" >
+    <input type="button" value="9" onclick="nine2()" ><br><br>
+    <input type="button" value="4" onclick="four2()" >
+    <input type="button" value="5" onclick="five2()" >
+    <input type="button" value="6" onclick="six2()" ><br><br>
+    <input type="button" value="1" onclick="one2()" >
+    <input type="button" value="2" onclick="two2()" >
+    <input type="button" value="3" onclick="three2()" ><br><br>
+    <input type="button" value="0" onclick="zero2()" >
+
+    <script>
+        function seven(){
+            document.getElementById("ip1").value+="7";
+        }
+        function eight(){
+            document.getElementById("ip1").value+="8";
+        }
+        function nine(){
+            document.getElementById("ip1").value+="9";
+        }
+        function four(){
+            document.getElementById("ip1").value+="4";
+        }
+        function five(){
+            document.getElementById("ip1").value+="5";
+        }
+        function six(){
+            document.getElementById("ip1").value+="6";
+        }
+        function one(){
+            document.getElementById("ip1").value+="1";
+        }
+        function two(){
+            document.getElementById("ip1").value+="2";
+        }
+        function three(){
+            document.getElementById("ip1").value+="3";
+        }
+        function zero(){
+            document.getElementById("ip1").value+="0";
+        }
+
+        function seven2(){
+            document.getElementById("ip2").value+="7";
+        }
+        function eight2(){
+            document.getElementById("ip2").value+="8";
+        }
+        function nine2(){
+            document.getElementById("ip2").value+="9";
+        }
+        function four2(){
+            document.getElementById("ip2").value+="4";
+        }
+        function five2(){
+            document.getElementById("ip2").value+="5";
+        }
+        function six2(){
+            document.getElementById("ip2").value+="6";
+        }
+        function one2(){
+            document.getElementById("ip2").value+="1";
+        }
+        function two2(){
+            document.getElementById("ip2").value+="2";
+        }
+        function three2(){
+            document.getElementById("ip2").value+="3";
+        }
+        function zero2(){
+            document.getElementById("ip2").value+="0";
+        }
+        
+        function addition(){
+            var x = parseInt(document.getElementById("ip1").value);
+            var y = parseInt(document.getElementById("ip2").value);
+            var z = x+y;
+            document.getElementById("op").value=z;
+        }
+        function subtraction(){
+            var x = parseInt(document.getElementById("ip1").value);
+            var y = parseInt(document.getElementById("ip2").value);
+            var z = x-y;
+            document.getElementById("op").value=z;
+        }
+        function multiplication(){
+            var x = document.getElementById("ip1").value;
+            var y = document.getElementById("ip2").value;
+            var z = x*y;
+            document.getElementById("op").value=z;
+        }
+        function division(){
+            var x = document.getElementById("ip1").value;
+            var y = document.getElementById("ip2").value;
+            var z = x/y;
+            document.getElementById("op").value=z;
+        }
+        function square(){
+            var x = document.getElementById("ip1").value;
+            var z = x*x;
+            document.getElementById("op").value=z;
+        }
+        function cube(){
+            var x = document.getElementById("ip1").value;
+            var z = x*x*x;
+            document.getElementById("op").value=z;
+        }
+        function clc(){
+            document.getElementById("ip1").value=" ";
+            document.getElementById("ip2").value=" ";
+            document.getElementById("op").value=" ";
+        }
+    </script>
+</body>
+</html>

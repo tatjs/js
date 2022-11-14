@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Compare String</title>
+</head>
+<body>
+
+    <input type="text" id="str1" placeholder="enter string one">
+    <input type="text" id="str2" placeholder="enter string two"><br><br>
+
+    <input type="button" value="localeCompare() method" onclick="localComp()" > 
+    <input type="button" value="strict equality operator method" onclick="equalityOp()" >
+    <input type="button" value="Regular Expression method" onclick="regexp()" >
+
+    <script>
+
+        function localComp(){
+            var s1 = document.getElementById('str1').value;
+            var s2 = document.getElementById('str2').value;
+            var result = s1.localeCompare(s2);
+            if(result==0)
+            alert("Strings are equal");
+            else
+            alert("String are not equal");
+        }
+
+        function equalityOp(){
+            var s1 = document.getElementById('str1').value;
+            var s2 = document.getElementById('str2').value;
+            if(s1===s2)
+            alert("Strings are equal");
+            else
+            alert("String are not equal");
+        }
+
+        function regexp(){
+            var s1 = document.getElementById('str1').value;
+            var s2 = document.getElementById('str2').value;
+            var regex = new RegExp(s2);
+            if(regex.test(s1))
+            alert("Strings are equal");
+            else
+            alert("String are not equal"); 
+        }
+    </script>
+
+</body>
+</html>

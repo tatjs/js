@@ -1,0 +1,21 @@
+
+<html>
+    <head>
+        <title>Multiplication Table</title>
+        <h1></h1>
+    </head>
+    <body>
+        <input type="number" id="num" placeholder="Enter the number" >
+        <input type="submit" onclick="MulTable()" >
+
+        <script>
+            function MulTable(){
+                var num=document.getElementById("num").value;
+                for(var i=1;i<=10;i++){
+                
+                document.writeln(num+"*"+i+"="+i*num+ "<br>"); 
+                }
+            }
+        </script>
+    </body>
+</html>

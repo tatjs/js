@@ -1,0 +1,40 @@
+<html>
+<head>
+<script>
+var array=new Array();
+var x=0;
+function add(){
+array[x]=document.getElementById("a1").value;
+x++;
+document.getElementById("a1").value="";
+document.getElementById("res1").value=(array);
+}
+function append1(){
+array.push(document.getElementById("obj").value);
+document.getElementById("res").value=(array);
+document.getElementById("res1").value="";
+document.getElementById("obj").value="";
+}
+function append2(){
+array.splice(0,0,document.getElementById("obj").value);
+document.getElementById("res").value=(array);
+document.getElementById("res1").value="";
+document.getElementById("obj").value="";
+}
+function append3(){
+array.unshift(document.getElementById("obj").value);
+document.getElementById("res").value=(array);
+document.getElementById("res1").value="";
+document.getElementById("obj").value="";
+}
+</script>
+</head>
+
+<body>
+Enter elements in an array&nbsp&nbsp: <input type="text" Id="a1">&nbsp&nbsp<input type="button" value="Add" onclick="add()"><br><br>
+The array is : <input type="text" Id="res1"><br><br>
+Enter the element to append in the array&nbsp&nbsp: <input type="text" Id="obj">&nbsp&nbsp <input type="button" value="Append using push()" onclick="append1()">
+&nbsp<input type="button" value="Append using splice()" onclick="append2()">&nbsp<input type="button" value="Append using unshift()" onclick="append3()"><br><br>
+Result &nbsp:&nbsp<input type="text" Id="res">
+</body>
+</html>

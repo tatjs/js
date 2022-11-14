@@ -1,0 +1,102 @@
+
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Area of Circle :</h1>
+        <input type="number" id ="radius" placeholder="Enter the radius" >
+        <br><br>
+        <h1>Area of Rectangle :</h1>
+        <input type="number" id="length" placeholder="Enter the length" >
+        <br><br>
+        <input type="number" id="breadth" placeholder="Enter the breadth" >
+        <br><br>
+
+        <h1>Area of Trap:</h1>
+        <input type="number" id="ta" placeholder="Enter the side a" >
+        <br><br>
+        <input type="number" id="tb" placeholder="Enter the side b" >
+        <br><br>
+        <input type="number" id="th" placeholder="Enter the height" >
+        <br><br>
+
+        <h1> Area of Square</h1>
+        <input type="number" id="sqr" placeholder="Enter the side">
+        <br><br>
+
+        <h1>Area of Triangle :</h1>
+        <input type="number" id="ht" placeholder="Enter the lheight" >
+        <br><br>
+        <input type="number" id="bs" placeholder="Enter the base" >
+        <br><br>
+
+        <h1>ENter 1 for Circle, Enter 2 for Rectangle , ENter 3 For Triangle, ENter 4 for Square, Enter 5 for Trapezium</h1>
+        <input type="number" id="case" placeholder="Enter here" >
+        <input type="submit" onclick="Area()" />
+        <script>
+            function Area()
+            {
+                var t = parseInt(document.getElementById("case").value);
+                switch (t)
+                {
+                    case 1:
+                        CalculateCircle();
+                       // console.log("hello")
+                        break;
+                    case 2:
+                        CalculateRectangle();
+                        break;
+                    case 3:
+                        CalculateTriangle();
+                        break;
+                    case 4:
+                        CalculateSquare();
+                        break;
+                    case 5:
+                        CalculateTrap();
+                        break;
+                    default:
+                        alert("Invalid >>>>>>");
+                        return;
+
+                }
+                function CalculateCircle()
+               {
+                var r = document.getElementById('radius').value;
+                var area = Math.PI*r*r;
+                alert(area);
+               }
+               function CalculateSquare()
+               {
+                var r = document.getElementById('sqr').value;
+                var area = r*r;
+                alert(area);
+               }
+               function CalculateTrap()
+               {
+                var a = parseInt(document.getElementById('ta').value);
+                var b = parseInt(document.getElementById('tb').value);
+                var h = document.getElementById('th').value;
+                var area = ((a+b)*h)/2;
+                alert(area);
+               }
+               function CalculateRectangle()
+               {
+                var l=document.getElementById('length').value;
+                var b=document.getElementById('breadth').value;
+                var area=l*b;
+                alert(area);    
+               }
+               function CalculateTriangle(){
+                var ht=document.getElementById('ht').value;
+                var bs=document.getElementById('bs').value;
+                var area=(ht*bs)/2;
+                alert(area);
+
+               }
+            }
+        </script>
+</body>
+
+</html>

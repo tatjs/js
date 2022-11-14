@@ -1,0 +1,99 @@
+<html>
+<title>Student Information Form</title>
+<head>
+<script type="text/javascript">
+function valid()
+{
+var na = document.getElementById("nm").value;
+var ag = document.getElementById("age").value;
+var adr = document.getElementById("add").value;
+var cty = document.getElementById("ct").value;
+var sta = document.getElementById("st").value;
+var ged = document.getElementById("gen").value;
+var mno = document.getElementById("pno").value;
+var em = document.getElementById("eid").value.indexOf("@");
+
+if(na==""||na==null)
+{
+alert("Enter The Name");
+return false;
+}
+
+else if(isNaN(ag)||ag<1||ag>100)
+{
+alert("The age must be a number between 1 and 100");
+return false;
+}
+
+else if(adr==""||adr==null)
+{
+alert("Enter Address");
+return false;
+}
+
+else if(cty==""||cty==null)
+{
+alert("Enter City");
+return false;
+}
+
+else if(sta==""||sta==null)
+{
+alert("Enter State");
+return false;
+}
+
+else if(ged==""||ged==null)
+{
+alert("Enter Gender");
+return false;
+}
+
+else if(mno==""||mno==null)
+{
+alert("Enter The Phone No");
+return false;
+}
+
+else if(isNaN(mno)||mno.length>10||mno.length<10)
+{
+alert("The mobile no. always has 10 digit numerical value");
+return false;
+}
+
+else if(em==-1)
+{
+alert("E-mail ID is not valid");
+return false;
+}
+
+else
+{
+alert("The Student Information Submitted Successfully");
+
+document.write("<b>"+ "Welcome " + "</b>" + na + "</br>" + "Please Check your information" 
++"<br><br>" + "Name: " + na + "</br>" + "Age: " + ag + "</br>" + "Address: " + adr + "</br>" + "City: " + cty + "</br>"
++ "State: " + sta + "</br>" + "Gender: " + ged + "</br>" + "Phone Number: " + mno + "</br>" + "Email id: " + em + "</br>");
+}
+}
+</script>
+</head>
+
+<body>
+<center>
+<h2><b>Student Information Form</b></h2>
+
+Name: <input type="text" id="nm" placeholder="Enter Your Name here"><br><br>
+Age: <input type="text" id="age" placeholder="Enter Your Age here"><br><br>
+Address: <input type="text" id="add" placeholder="Enter your Address"><br><br>
+City: <input type="text" id="ct" placeholder="Enter City"><br><br>
+State: <input type="text" id="st" placeholder="Enter State"><br><br>
+Gender: <input type="text" id="gen" placeholder="Enter your Gender"><br><br>
+Phone Number: <input type="text" id="pno" placeholder="Enter Your Phone Number"><br><br>
+Email id: <input type="text" id="eid" placeholder="Enter Your Email here"><br><br>
+
+<input type="button" onclick = "valid()" value="Submit">
+
+</center>
+</body>
+</html>
